@@ -1,0 +1,20 @@
+part 1_1
+
+('time: ', 1.008, 'ident: ', 1, 'created: ', 0, 'elapsedTime: ', 1.008, 'transmission delay: ', 0.008
+, 'Prop delay: ', 1.0, 'queueing delay: ', 0)
+
+part 1_2
+
+('time: ', 80.01, 'ident: ', 1, 'created: ', 0, 'elapsedTime: ', 80.01, 'transmission delay: ', 80.0,
+ 'Prop delay: ', 0.01, 'queueing delay: ', 0)
+
+part 1_3
+
+('time: ', 0.018000000000000002, 'ident: ', 1, 'created: ', 0, 'elapsedTime: ', 0.018000000000000002,
+ 'transmission delay: ', 0.008, 'Prop delay: ', 0.01, 'queueing delay: ', 0)
+('time: ', 0.026000000000000002, 'ident: ', 2, 'created: ', 0, 'elapsedTime: ', 0.026000000000000002,
+ 'transmission delay: ', 0.008, 'Prop delay: ', 0.01, 'queueing delay: ', 0.008)
+('time: ', 0.034, 'ident: ', 3, 'created: ', 0, 'elapsedTime: ', 0.034, 'transmission delay: ', 0.008
+, 'Prop delay: ', 0.01, 'queueing delay: ', 0.016)
+('time: ', 2.018, 'ident: ', 4, 'created: ', 2.0, 'elapsedTime: ', 0.017999999999999794, 'transmissio
+n delay: ', 0.008, 'Prop delay: ', 0.01, 'queueing delay: ', 0.0)

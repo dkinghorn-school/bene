@@ -2,3 +2,5 @@
 *.pyc
 .idea
 examples/received
+.vscode
+.DS_Store
