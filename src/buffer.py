@@ -22,6 +22,10 @@ class SendBuffer(object):
             been sent but not yet acked."""
         return self.next_seq - self.base_seq
 
+    def dataRemaining(self):
+        """ returns true if outstanding or available are greater than zero"""
+        return self.available() + self.outstanding() > 0
+
     def put(self, data):
         """ Put some data into the buffer """
         self.buffer += data

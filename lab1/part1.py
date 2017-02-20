@@ -15,11 +15,7 @@ class DelayHandler(object):
     def receive_packet(packet):
         print(("time: ", Sim.scheduler.current_time(),
                "ident: ", packet.ident,
-               "created: ", packet.created,
-               "elapsedTime: ", Sim.scheduler.current_time() - packet.created,
-               "transmission delay: ", packet.transmission_delay,
-               "Prop delay: ", packet.propagation_delay,
-               "queueing delay: ", packet.queueing_delay))
+               "created: ", packet.created))
 
 def part1_1():
     # parameters
@@ -80,7 +76,7 @@ def part1_3():
     n1 = net.get_node('n1')
     n2 = net.get_node('n2')
     n1.add_forwarding_entry(address=n2.get_address('n1'), link=n1.links[0])
-    n2.add_forwarding_entry(address=n3.get_address('n2'), link=n2.links[0])
+    n2.add_forwarding_entry(address=n1.get_address('n2'), link=n2.links[0])
 
     # setup app
     d = DelayHandler()
@@ -108,14 +104,14 @@ def main():
     print( "part 1_1" )
     # print()
     part1_1()
-    # print()
-    # print( "part 1_2" )
-    # print()
-    # part1_2()
-    # print()
-    # print( "part 1_3" )
-    # print()
-    # part1_3()
+    print()
+    print( "part 1_2" )
+    print()
+    part1_2()
+    print()
+    print( "part 1_3" )
+    print()
+    part1_3()
 
     # parameters
     # Sim.scheduler.reset()
