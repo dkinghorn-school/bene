@@ -7,7 +7,7 @@ sys.path.append('..')
 
 from src.sim import Sim
 from src.transport import Transport
-from src.tcp import TCP
+from tcp import TCP
 
 from networks.network import Network
 
@@ -50,10 +50,22 @@ class Main(object):
         parser.add_option("-l", "--loss", type="float", dest="loss",
                           default=0.5,
                           help="random loss rate")
+        parser.add_option("-w", "--window", type="float", dest="window",
+                          default=3000,
+                          help="window size")
+        parser.add_option("-n", "--no-debug", dest="nodebug",
+                          action="store_true",
+                          help="turn off debugging")
+        parser.add_option("-r", "--fast-retransmit", dest="retransmit",
+                          action="store_true",
+                          help="turn on fast retransmit")
 
         (options, args) = parser.parse_args()
         self.filename = options.filename
         self.loss = options.loss
+        self.window = options.window
+        self.debug = not options.nodebug
+        self.fast_retransmit = True if options.retransmit else False
 
     def diff(self):
         args = ['diff', '-u', self.filename, os.path.join(self.directory, self.filename)]
@@ -69,8 +81,9 @@ class Main(object):
     def run(self):
         # parameters
         Sim.scheduler.reset()
-        Sim.set_debug('AppHandler')
-        Sim.set_debug('TCP')
+        if self.debug:
+            Sim.set_debug('AppHandler')
+            Sim.set_debug('TCP')
 
         # setup network
         net = Network('../networks/lab2/2nodes.txt')
@@ -90,8 +103,8 @@ class Main(object):
         a = AppHandler(self.filename)
 
         # setup connection
-        c1 = TCP(t1, n1.get_address('n2'), 1, n2.get_address('n1'), 1, a, window=3000)
-        c2 = TCP(t2, n2.get_address('n1'), 1, n1.get_address('n2'), 1, a, window=3000)
+        c1 = TCP(t1, n1.get_address('n2'), 1, n2.get_address('n1'), 1, a, window=self.window, fastRetransmit=self.fast_retransmit)
+        c2 = TCP(t2, n2.get_address('n1'), 1, n1.get_address('n2'), 1, a, window=self.window, fastRetransmit=self.fast_retransmit)
 
         # send a file
         with open(self.filename, 'rb') as f:
