@@ -43,6 +43,8 @@ class TCP(Connection):
         # number not yet received
         self.ack = 0
 
+        self.packetQueueingDelay = []
+
     def trace(self, message):
         """ Print debugging messages. """
         Sim.trace("TCP", message)
@@ -150,11 +152,20 @@ class TCP(Connection):
             an ACK."""
         self.trace("%s (%d) received TCP segment from %d for %d" % (
             self.node.hostname, packet.destination_address, packet.source_address, packet.sequence))
+        self.packetQueueingDelay.append(packet.queueing_delay)
         self.receive_buffer.put(packet.body, packet.sequence)
         (data, seq) = self.receive_buffer.get()
         if len(data) > 0:
             self.app.receive_data(data)
             self.ack += len(data)
+            if self.ack == 514520:
+                totalDelay = 0.0
+                for delay in self.packetQueueingDelay:
+                    totalDelay = totalDelay + delay
+                averageDelay = totalDelay/len(self.packetQueueingDelay)
+                print('totalDelay: {}'.format(totalDelay))
+                print('averageDelay: {}'.format(averageDelay))
+                print('throughput: {}'.format(514520/Sim.scheduler.current_time()))
         self.send_ack()
 
 # should work

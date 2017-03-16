@@ -48,7 +48,7 @@ class Main(object):
                           help="filename to send")
 
         parser.add_option("-l", "--loss", type="float", dest="loss",
-                          default=0.5,
+                          default=0.0,
                           help="random loss rate")
         parser.add_option("-w", "--window", type="float", dest="window",
                           default=3000,
@@ -86,7 +86,7 @@ class Main(object):
             Sim.set_debug('TCP')
 
         # setup network
-        net = Network('../networks/lab2/2nodes.txt')
+        net = Network('../networks/lab2/queue.txt')
         net.loss(self.loss)
 
         # setup routes
