@@ -146,11 +146,12 @@ class TCP(Connection):
 
     def set_window_from_cwnd(self):
         if self.increment >= self.mss:
-            self.increment = self.increment - self.mss
+            self.increment = self.increment % self.mss
             self.window = self.window + self.mss
 
     def lower_threshold(self):
         self.threshold = max(self.mss, self.window / 2)
+        self.threshold = self.threshold - self.threshold % self.mss
         self.increment = 0
         self.window = self.mss
 
