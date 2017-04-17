@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAR 2017 19:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAR 2017 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -307,39 +307,79 @@ e
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 57.
+<graphs/cwndbasic.png, id=1, 578.16pt x 433.62pt> [1
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 57.
- [1
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+File: graphs/cwndbasic.png Graphic file (type png)
+ <use graphs/cwndbasic.png>
+Package pdftex.def Info: graphs/cwndbasic.png used on input line 84.
+(pdftex.def)             Requested size: 312.9803pt x 234.73357pt.
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
-report.aux) ) 
+<graphs/cwnd14.png, id=18, 578.16pt x 433.62pt>
+File: graphs/cwnd14.png Graphic file (type png)
+ <use graphs/cwnd14.png>
+Package pdftex.def Info: graphs/cwnd14.png used on input line 98.
+(pdftex.def)             Requested size: 312.9803pt x 234.73357pt.
+
+[2 <./graphs/cwndbasic.png> <./graphs/cwnd14.png>]
+<graphs/sequence14.png, id=24, 794.97pt x 216.81pt>
+File: graphs/sequence14.png Graphic file (type png)
+
+<use graphs/sequence14.png>
+Package pdftex.def Info: graphs/sequence14.png used on input line 105.
+(pdftex.def)             Requested size: 455.24408pt x 124.16191pt.
+ <graphs/cwnd1428.png, id=25, 578.16pt x 433.62pt>
+File: graphs/cwnd1428.png Graphic file (type png)
+
+<use graphs/cwnd1428.png>
+Package pdftex.def Info: graphs/cwnd1428.png used on input line 118.
+(pdftex.def)             Requested size: 312.9803pt x 234.73357pt.
+
+<graphs/sequence1428.png, id=26, 794.97pt x 216.81pt>
+File: graphs/sequence1428.png Graphic file (type png)
+
+<use graphs/sequence1428.png>
+Package pdftex.def Info: graphs/sequence1428.png used on input line 124.
+(pdftex.def)             Requested size: 455.24408pt x 124.16191pt.
+ [3 <./graphs/sequence14.png> <./graphs/cwnd1428.png>] <graphs/cwnd142628.png, 
+id=32, 578.16pt x 433.62pt>
+File: graphs/cwnd142628.png Graphic file (type png)
+
+<use graphs/cwnd142628.png>
+Package pdftex.def Info: graphs/cwnd142628.png used on input line 138.
+(pdftex.def)             Requested size: 312.9803pt x 234.73357pt.
+
+<graphs/sequence142628.png, id=33, 794.97pt x 216.81pt>
+File: graphs/sequence142628.png Graphic file (type png)
+
+<use graphs/sequence142628.png>
+Package pdftex.def Info: graphs/sequence142628.png used on input line 140.
+(pdftex.def)             Requested size: 455.24408pt x 124.16191pt.
+ [4 <./graphs/sequence1428.png> <./graphs/cwnd142628.png> <./graphs/sequence142
+628.png>] [5] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 4033 strings out of 493014
- 56420 string characters out of 6133351
- 154561 words of memory out of 5000000
- 7530 multiletter control sequences out of 15000+600000
- 9570 words of font info for 35 fonts, out of 8000000 for 9000
+ 4046 strings out of 493014
+ 56865 string characters out of 6133351
+ 152561 words of memory out of 5000000
+ 7539 multiletter control sequences out of 15000+600000
+ 9855 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,40p,235b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (2 pages, 106725 bytes).
+ 38i,6n,40p,235b,1120s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on report.pdf (5 pages, 424561 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

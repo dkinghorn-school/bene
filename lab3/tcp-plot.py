@@ -29,22 +29,23 @@ class Plotter:
         df['Sequence Number']  =  df['Sequence Number'] / 1000 % 50
         # send
         send = df[df.Event == 'send'].copy()
-        ax1 = send.plot(x='Time',y='Sequence Number',kind='scatter',marker='+',s=2,figsize=(11,3))
+        ax1 = send.plot(x='Time',y='Sequence Number',kind='scatter',marker='+',s=2,figsize=(11,3), label='Send')
         # transmit
         transmit = df[df.Event == 'transmit'].copy()
-        transmit.plot(x='Time',y='Sequence Number',kind='scatter',marker='o',s=2,figsize=(11,3),ax=ax1)
+        transmit.plot(x='Time',y='Sequence Number',kind='scatter',marker='o',s=2,figsize=(11,3),ax=ax1, label='transmit')
         # drop
         try:
             drop = df[df.Event == 'drop'].copy()
-            drop.plot(x='Time',y='Sequence Number',kind='scatter',marker='x',s=10,figsize=(11,3),ax=ax1)
+            drop.plot(x='Time',y='Sequence Number',kind='scatter',marker='x',s=10,figsize=(11,3),ax=ax1, label='drop')
         except:
             pass
         # ack
         ack = df[df.Event == 'ack'].copy()
-        ax = ack.plot(x='Time',y='Sequence Number',kind='scatter',marker='v',s=2,figsize=(11,3),ax=ax1)
+        ax = ack.plot(x='Time',y='Sequence Number',kind='scatter',marker='v',s=2,figsize=(11,3),ax=ax1, label='ACK')
         ax.set_xlim(-0.1,5)
         ax.set_xlabel('Time')
         ax.set_ylabel('Sequence Number')
+        ax.legend()
         plt.suptitle("")
         plt.title("")
         plt.savefig(filename,dpi=300)
